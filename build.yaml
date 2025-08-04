@@ -19,7 +19,7 @@
 ---
 include:
  - board: seeeduino_xiao_ble
-   shield: wristball2 rgbled_adapter
+   shield: wristball2
    snippet: studio-rpc-usb-uart
  - board: seeeduino_xiao_ble
    shield: settings_reset
