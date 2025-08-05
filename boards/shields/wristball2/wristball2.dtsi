@@ -54,11 +54,6 @@
         full-ohms = <(470000 + 150000)>;
     };
 
-    // PMW回転制御Behaviorの定義
-    pmw_rotation: pmw_rotation {
-        compatible = "zmk,behavior-pmw-rotation";
-        #binding-cells = <0>;
-    };
 
 };
 
