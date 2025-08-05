@@ -2,6 +2,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 
+
 &mt {
     flavor = "balanced";
     quick-tap-ms = <0>;
@@ -25,6 +26,13 @@
 };
 
 / {
+    behaviors {
+        pmw_rotation: pmw_rotation {
+            compatible = "zmk,behavior-pmw-rotation";
+            #binding-cells = <0>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
@@ -79,8 +87,8 @@
 
         default_layer {
             bindings = <
-&kp A    &kp B  &lt 1 C
-&lt 5 D  &to 1  &to 2
+&kp A         &kp B          &lt 1 C
+&lt 5 D       &pmw_rotation  &to 2
             >;
         };
 
