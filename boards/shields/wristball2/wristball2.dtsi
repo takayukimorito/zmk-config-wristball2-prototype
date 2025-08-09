@@ -48,6 +48,7 @@
     };
 
     vbatt: vbatt {
+        status = "disabled";
         compatible = "zmk,battery-voltage-divider";
         io-channels = <&adc 0>;
         output-ohms = <150000>;
@@ -58,7 +59,7 @@
 };
 
 &adc {
-    status = "okay";
+    status = "disabled";
 };
 
 &spi0 {
