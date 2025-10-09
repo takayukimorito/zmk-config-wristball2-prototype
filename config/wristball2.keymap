@@ -82,6 +82,23 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        lt_mkp: lt_mkp {
+            compatible = "zmk,behavior-hold-tap";
+            label = "LT_MKP";
+            bindings = <&mo>, <&mkp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        mb_dance: mb_dance {
+            compatible = "zmk,behavior-tap-dance";
+            label = "MB_DANCE";
+            #binding-cells = <0>;
+            tapping-term-ms = <200>;
+            bindings = <&mkp MB4>, <&mkp MB5>;
+        };
     };
 
     keymap {
@@ -89,8 +106,8 @@
 
         default_layer {
             bindings = <
-&mkp MCLK     &mkp LCLK      &mkp RCLK
-&lt 5 ESCAPE  &pmw_rotation  &mo 6
+&lt_mkp 5 MCLK  &mkp LCLK      &mkp RCLK
+&mb_dance       &pmw_rotation  &mo 6
             >;
         };
 
